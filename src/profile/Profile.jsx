@@ -2,10 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Profile = (props) => {
+  const handleAlert = () => {
+    props.alerting(props.fullName);
+  };
   return (
     <>
       <h1 style={{ color: "blue", fontFamily: "'Work Sans', sans-serif" }}>
-        <a href="#">{props.fullName}</a>
+        <a href="#" onClick={handleAlert}>
+          {props.fullName}
+        </a>
       </h1>
       <h1
         style={{
